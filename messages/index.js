@@ -30,7 +30,7 @@ const LuisModelUrl = 'https://' + luisAPIHostName + '/luis/v1/application?id=' +
 var recognizer = new builder.LuisRecognizer(LuisModelUrl);
 var intents = new builder.IntentDialog({ recognizers: [recognizer] })
 /*
-.matches('<yourIntent>').. See details at http://docs.botframework.com/builder/node/guides/understanding-natural-language/
+.matches('<yourIntent>'). See details at http://docs.botframework.com/builder/node/guides/understanding-natural-language/
 */
 .matches('None', (session, args) => {
     session.send('Hi! This is the None intent handler for you; But I can understand that you said: \'%s\'.', session.message.text);
